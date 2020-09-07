@@ -10,7 +10,7 @@ class MloggerServiceProvider extends ServiceProvider
 	}
 
 	public function register() {
-		$this->app->bind('Mlogger', function() {
+		$this->app->bind('Logger', function() {
             return new Mlogger();
         });
 	}
