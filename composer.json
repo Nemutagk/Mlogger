@@ -10,7 +10,10 @@
         }
     ],
     "minimum-stability": "dev",
-    "require": {},
+    "require": {
+        "php": "^7.2.5",
+        "jenssegers/mongodb": "dev-develop",
+    },
     "autoload": {
         "psr-4": {
             "Nemutagk\\Mlogger\\": "src/"
