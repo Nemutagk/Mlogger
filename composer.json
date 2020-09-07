@@ -1,5 +1,5 @@
 {
-    "name": "nemutagk/mongologger",
+    "name": "nemutagk/mlogger",
     "description": "Intrega MongoDB a monolog/laravel para poder administrar de mejor manera los logs",
     "type": "library",
     "license": "MIT",
