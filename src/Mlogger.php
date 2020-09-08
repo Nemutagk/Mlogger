@@ -8,6 +8,17 @@ use Nemutagk\Mlogger\Model\Logger as MloggerModel;
 class Mlogger
 {
     public function __call($name, $arguments) {
+        if (isset($arguments[1]) && is_object($arguments[1])) {
+            if (method_exists($arguments[1],'toArray'))
+                $arguments[1] = $arguments[1]->toArray();
+            else if (method_exists($arguments[1], '_toArray()'))
+                $arguments[1] = $arguments[1]->_toArray();
+            else if (method_exists($arguments[1], '__toArray()'))
+                $arguments[1] = $arguments[1]->__toArray();
+            else
+                $arguments[1] = (array)$arguments[1];
+        }
+
         if (count($arguments) == 1)
             Log::$name($arguments[0]);
         else if (is_array($arguments[1]))
