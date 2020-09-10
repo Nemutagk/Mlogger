@@ -1,0 +1,32 @@
+{
+    "name": "nemutagk/mlogger",
+    "description": "Intrega MongoDB a monolog/laravel para poder administrar de mejor manera los logs",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jose Alberto Cabrera",
+            "email": "nemutagk@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": "^7.2.5",
+        "jenssegers/mongodb": "^3.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Nemutagk\\Mlogger\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Nemutagk\\Mlogger\\MloggerServiceProvider"
+            ],
+            "aliases": {
+                "Logger": "Nemutagk\\Mlogger\\Facades\\MloggerFacades"
+            }
+        }
+    }
+}
