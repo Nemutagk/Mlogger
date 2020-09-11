@@ -9,10 +9,11 @@
             "email": "nemutagk@gmail.com"
         }
     ],
-    "minimum-stability": "dev",
+    "minimum-stability": "stable",
+    "prefer-stable": true,
     "require": {
         "php": "^7.2.5",
-        "jenssegers/mongodb": "^dev"
+        "jenssegers/mongodb": "^3.5"
     },
     "autoload": {
         "psr-4": {
