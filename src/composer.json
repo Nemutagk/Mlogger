@@ -9,8 +9,6 @@
             "email": "nemutagk@gmail.com"
         }
     ],
-    "minimum-stability": "stable",
-    "prefer-stable": true,
     "require": {
         "php": "^7.2.5",
         "jenssegers/mongodb": "^3.5"
@@ -29,5 +27,7 @@
                 "Logger": "Nemutagk\\Mlogger\\Facades\\MloggerFacades"
             }
         }
-    }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
 }
