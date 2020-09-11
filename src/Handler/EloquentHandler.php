@@ -8,6 +8,12 @@ use Nemutagk\Mlogger\Models\Logger;
 class EloquentHandler extends AbstractProcessingHandler
 {
 	protected function write($config) : void {
-		Logger::create($config);
+		$log = new Logger();
+		
+		foreach($config as $key => $valor) {
+			$log->$key = $valor;
+		}
+
+		$log->save();
 	}
 }
