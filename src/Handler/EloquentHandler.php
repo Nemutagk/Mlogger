@@ -12,6 +12,8 @@ class EloquentHandler extends AbstractProcessingHandler
 
 		$config = $this->clear_keys($config);
 
+		$config['hash'] = config('mlogger.hash','n/a');
+
 		foreach($config as $key => $valor) {
 			$log->$key = $valor;
 		}
