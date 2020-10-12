@@ -10,7 +10,10 @@ class EloquentHandler extends AbstractProcessingHandler
 	protected function write($config) : void {
 		$log = new Logger();
 
-		$config = $this->clear_keys($config);
+		$json = json_encode($config, JSON_PRETTY_PRINT);
+		$arraySanitized = json_decode($json, true);
+
+		$config = $this->clear_keys($arraySanitized);
 
 		$config['hash'] = config('mlogger.hash','n/a');
 
